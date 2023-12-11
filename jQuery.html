@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    </head>
+    <body>
+
+        <P> If you click on the third &#182; you will make the header hide slowly,
+            <br>
+            <br>
+            If you click on &#182; and check console it will display a message
+        </P>
+
+    <script>
+        $(document).ready(function() {
+            $("html").append (
+                "<body>\
+                    <div id='container'>\
+                        <div id='inner'>\
+                            <h1>basic jquery</h1>\
+                            <p id='1'>paragraph 1</p>\
+                            <p id='2'>paragraph 2</p>\
+                            <p id='3'>paragraph 3</p>\
+                            </div>\
+                        </div>\
+                    </body>"
+                );
+                $("#2").css({"color": "red"});
+                $("#1").click(function (){
+                    console.log("you clicked on p1");
+
+
+                });
+                $("#3").click(function() {
+                    $("h1").hide( "slow");
+
+                });
+            
+        });
+        </script>
+     </body>
+</html>
